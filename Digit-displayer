@@ -1,0 +1,24 @@
+/* Calculates how many digits a number has */
+
+#include <stdio.h>
+
+int main(void)
+{
+    int imput_number;
+    
+    printf ("Please enter a number up to 4 digits long: ");
+    scanf ("%d", &imput_number);
+    
+    if (imput_number <= 9) {
+        printf ("The number is 1 digit long\n");
+    } else if ((10 <= imput_number) && (imput_number <= 99)) {
+        printf ("The number is 2 digits long\n");
+    } else if ((100 <= imput_number) && (imput_number <= 999)) { 
+        printf ("The number is 3 digits long\n");
+    } else if ((1000 <= imput_number) && (imput_number <= 9999)) {
+        printf ("The number is 4 digits long\n");
+    }
+    
+    return 0;
+
+}
