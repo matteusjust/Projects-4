@@ -1,0 +1,21 @@
+/* Converts a 24 hour time, into a 12 hour form using selection statements */
+
+#include <stdio.h>
+
+int main(void)
+{
+    int hour, minutes_s;
+    
+    printf ("Please enter a 24-hour time: ");
+    scanf ("%d:%d", &hour, &minutes_s);
+    
+    if (hour == 0) {
+        printf ("The converted time is: 12:%d PM ", minutes_s);
+    } else if (hour == 12) {
+        printf ("The converted time is: 12:%d AM", minutes_s);
+    } else if ((13 <= hour) && (hour < 24)) {
+        printf ("The converted time is: %d:%d PM", hour - 12, minutes_s);
+    }
+    
+    return 0;
+}
