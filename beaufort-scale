@@ -1,0 +1,26 @@
+/* Use the beaufort scale to dertaminate the strenght of the wind*/
+#include <stdio.h>
+
+int main(void)
+{
+    float input;
+    
+    printf ("Please enter the speed of the wind in knots: ");
+    scanf ("%f", &input);
+    
+    if (input < 1){
+        printf ("The wind is calm\n");
+    } else if ((input >= 1) && (input <= 3) ){
+        printf ("The air is light\n");
+    } else if ((input >= 4) && (input <= 27)){
+        printf ("There is a breeze\n");
+    } else if ((input >= 28) && (input <= 47)){
+        printf ("There is a gale\n");
+    } else if ((input >= 48) && (input <= 63)){
+        printf ("There is a storm\n");
+    } else if (input > 63){
+        printf ("There is huricane!\n");
+    }
+    
+    return 0;
+}
