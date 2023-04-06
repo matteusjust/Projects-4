@@ -1,0 +1,55 @@
+/* Prints the anglish word for a two digit number*/
+
+#include <stdio.h>
+
+int main(void)
+{
+    int input, decimal, units;
+    
+    printf ("Please insert a two digit number: ");
+    scanf ("%d", &input);
+    
+    switch (input) {
+        case 11: printf ("The number you entered is eleven"); break;
+        case 12: printf ("The number you entered is twelve"); break;
+        case 13: printf ("The number you entered is thirteen"); break;
+        case 14: printf ("The number you entered is fourteen"); break;
+        case 15: printf ("The number you entered is fiftheen"); break;
+        case 16: printf ("The number you entered is sixteen"); break;
+        case 17: printf ("The number you entered is seventeen"); break;
+        case 18: printf ("The number you entered is eighteen"); break;
+        case 19: printf ("The number you entered is nineteen"); break;
+        
+    }
+    
+    decimal = input / 10;
+    units = input % 10;
+    
+    switch (decimal) {
+        case 1: printf ("The number you entered is ten"); break;
+        case 2: printf ("The number you entered is twenty"); break;
+        case 3: printf ("The number you entered is thirty"); break;
+        case 4: printf ("The number you entered is fourty"); break;
+        case 5: printf ("The number you entered is fifty"); break;
+        case 6: printf ("The number you entered is sixty"); break;
+        case 7: printf ("The number you entered is sevety"); break;
+        case 8: printf ("The number you entered is eigthy"); break;
+        case 9: printf ("The number you entered is ninety"); break;
+    }
+    
+    switch (units) {
+        case 1: printf ("-one"); break;
+        case 2: printf ("-two"); break;
+        case 3: printf ("-three"); break;
+        case 4: printf ("-four"); break;
+        case 5: printf ("-five"); break;
+        case 6: printf ("-six"); break;
+        case 7: printf ("-seven"); break;
+        case 8: printf ("-eight"); break;
+        case 9: printf ("-nine"); break;
+    }
+    
+    return 0;
+}
+
+/* This program has a small problem when inputing numbers 11 to 19, im going to try to fix it eventually but all the other numbers work fine */
